@@ -9,7 +9,7 @@
 		<script src="jquery-ui-1.9.2.custom.js"></script>
 		<script src="jquery/myJquery.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="styles2.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
 
 	</head>
 
@@ -128,12 +128,12 @@
 				var currentIndex;
 				var newIndex;
 
-				var str1 = "I enter the small room of the Panamerican Kitchen . It is already quite late , the kitchen is about to close . A cloud of metallic fat is hanging in the air ; fat they only use for Panamerican food when the vegan delivery had a shortage .     You immediately caught my attention . You are sitting at a small plastic table , a glass of cheap scotch and a plate with left-over heads of sucked king prawns in front of you . You are slightly bending over the table . In a permanent back and forth you are fighting with wisps of your long blond hair that permanently keep falling into your face . Push back . Fall . Push back . Fall .          I like the graceful rhythmic movements of your fingers fondling the glass panel of your phone . You seem to be far away . I make a step towards you .     Nice pic .   Intriguing romantic eyes .. sweet clever deep ... submissive but independent. A kinky mind behind those eyes. I tried to describe part of your erotic shade you have in that picture .     You giggle. Your teeth are straight . Something unusual in this city . Your hair caresses your cleavage . I think I love you .     Great smile , hair and height . You look warm and positive How are you today ?     Toilet flushing . Light flashing .     You don’t look up . Instead your hair continues seesawing back and forth . The movement of your fingers changed . Now your thumb rhythmically wipes the screen from right to left , right to left , right to left . Then left to right . You are incredibly fast .     I observe you for a while . The room is empty . Besides both of us all the other guests have left already . The waiter polishes wine glasses with a holey kitchen towel .      I position myself closer to you . This will crop away my unattractive parts from your field of vision . My way too skinny legs . My bad taste . I twist my head a bit to create the right incidental angle for the light in this room to sculpt my face . I come intensely close .     Hey , thought I’d try a question to break the ice . If you could travel to any country in the world , where would you go and why ?     You don’t look up . No response . No reaction on my inept advance . I start to panic . I like animals , but unfortunately animals are not allowed in the Panamerican Kitchen . You could otherwise see kittens balancing on my head , dogs licking my face , or me cuddling an ostrich . I know that everyone else is doing that . It’s cute . You might have liked it .     I open my business case . I am a journalist . You can see me on Aljazeera . I have a degree from Cambridge . Here , I am also on youtube . I will send you the links later . I want to meet you .     I close it again . You seem to be absorbed in finger movement .     laters , James Michael (American) xoxoxo Jason     I leave the Panamerican Kitchen .";
+				var str1 = "I enter the small room of the Panamerican Kitchen . It is already quite late , the kitchen is about to close . A cloud of metallic fat is hanging in the air ; fat they only use for Panamerican food when the vegan delivery had a shortage .     You immediately caught my attention . You are sitting at a small plastic table , a glass of cheap scotch and a plate with left-over heads of sucked king prawns in front of you . You are slightly bending over the table . In a permanent back and forth you are fighting with wisps of your long blond hair that permanently keep falling into your face . Push back . Fall . Push back . Fall .     I like the graceful rhythmic movements of your fingers fondling the glass panel of your phone . You seem to be far away . I make a step towards you .     Nice pic .   Intriguing romantic eyes .. sweet clever deep ... submissive but independent. A kinky mind behind those eyes. I tried to describe part of your erotic shade you have in that picture .          You giggle. Your teeth are straight . Something unusual in this city . Your hair caresses your cleavage . I think I love you .     xyz smile , hair and height . You look warm and positive How are you today ?     Toilet flushing . Light flashing .     You don’t look up . Instead your hair continues seesawing back and forth . The movement of your fingers changed . Now your thumb rhythmically wipes the screen from right to left , right to left , right to left . Then left to right . You are incredibly fast .     I observe you for a while . The room is empty . Besides both of us all the other guests have left already . The waiter polishes wine glasses with a holey kitchen towel .      I position myself closer to you . This will crop away my unattractive parts from your field of vision . My way too skinny legs . My bad taste . I twist my head a bit to create the right incidental angle for the light in this room to sculpt my face . I come intensely close .     Hey , thought I’d try a question to break the ice . If you could travel to any country in the world , where would you go and why ?     You don’t look up . No response . No reaction on my inept advance . I start to panic . I like animals , but unfortunately animals are not allowed in the Panamerican Kitchen . You could otherwise see kittens balancing on my head , dogs licking my face , or me cuddling an ostrich . I know that everyone else is doing that . It’s cute . You might have liked it .     I open my business case . I am a journalist . You can see me on Aljazeera . I have a degree from Cambridge . Here , I am also on youtube . I will send you the links later . I want to meet you .     I close it again . You seem to be absorbed in finger movement .      laters , James Michael (American) xoxoxo Jason     I leave the Panamerican Kitchen .";
 				var words1 = str1.split(" "); 
 				var amountWords = words1.length;
 				var text = "";
 				var index = 0;
-				var delay = 500; 
+				var delay = 300; 
 				
 				
 				console.log(words1.indexOf("xyz")); // find index of particular word
@@ -147,14 +147,6 @@
 				[11:45:39 pm]: Stamp 7: 607; xoxoxo */
 
 				// LOADING SCREEN 
-				/*var loadingScreen = {
-					scene: new THREE.Scene(),
-					camera: new THREE.PerspectiveCamera(90, 1280/720, 0.1, 100),
-					box: new THREE.Mesh(
-						new THREE.BoxGeometry(0.5,0.5,0.5),
-						new THREE.MeshBasicMaterial({color: 0xfe7cff})
-					)
-				};*/
 
 				var RESOURCES_LOADED = false;
 				var x = document.getElementById("load");
@@ -212,13 +204,24 @@
 					    		myVar ++;
 
 					    		// [11:46:20 pm]: Stamp 1: 161; Nice
-					    		if (index == 175)	{
+					    		if (index == 169)	{
 					    			document.getElementById("Timestamp1").innerHTML = "[11:46:20 pm]:";
+
+					    		}
+
+					    		if (index == 172) {
+					    			document.getElementById("Timestamp1").remove();
+
 					    		}
 
 					    		// [11:47:33 pm]: Stamp 2: 166;  Intriguing
-					    		if (index == 179)	{
+					    		if (index == 174 )	{
 					    			document.getElementById("Timestamp2").innerHTML = "[11:47:33 pm]:";
+					    		}
+
+					    		if (index == 206) {
+					    			document.getElementById("Timestamp2").remove();
+
 					    		}
 
 					    		// [11:41:06 pm]: Stamp 3: 227;  Great
@@ -226,9 +229,19 @@
 					    			document.getElementById("Timestamp3").innerHTML = "[11:41:06 pm]:";
 					    		}
 
+					    		if (index == 261) {
+					    			document.getElementById("Timestamp3").remove();
+
+					    		}
+
 					    		// [11:58:20 pm]: Stamp 4: 433; Hey
 					    		if (index == 432)	{
 					    			document.getElementById("Timestamp4").innerHTML = "[11:58:20 pm]:";
+					    		}
+
+					    		if (index == 462) {
+					    			document.getElementById("Timestamp4").remove();
+
 					    		}
 
 					    		// [11:42:08 pm]: Stamp 6: 602; laters
@@ -236,14 +249,29 @@
 					    			document.getElementById("Timestamp5").innerHTML = "[11:42:08 pm]:";
 					    		}
 
+					    		if (index == 617) {
+					    			document.getElementById("Timestamp5").remove();
+
+					    		}
+
 					    		// [11:55:44 pm]: Stamp 6: 605; Michael
-					    		if (index == 616)	{
+					    		if (index == 617)	{
 					    			document.getElementById("Timestamp6").innerHTML = "[11:55:44 pm]:";
+					    		}
+
+					    		if (index == 619) {
+					    			document.getElementById("Timestamp6").remove();
+
 					    		}
 
 					    		// [11:45:39 pm]: Stamp 7: 607; xoxoxo
 					    		if (index == 619)	{
 					    			document.getElementById("Timestamp7").innerHTML = "[11:45:39 pm]:";
+					    		}
+
+					    		if (index == 621) {
+					    			document.getElementById("Timestamp7").remove();
+
 					    		}
 
 					    		document.getElementById("NoNoNoYesNoText").innerHTML = words1[index];
@@ -555,7 +583,7 @@
 					}
 
 					requestAnimationFrame( animate );
-					if ( index > 134 ){
+					if ( index > 330 ){
 
 						cameraDistanceX = 2000;
 						cameraDistanceZ = 2000;
@@ -730,7 +758,6 @@
 		<div id = "runtext">
 			<div id ="Text">
 				<p id="NoNoNoYesNoText"></p>
-				<p id="demo"></p>
 			</div>		
 		</div> 
 
