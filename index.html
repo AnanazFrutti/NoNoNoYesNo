@@ -37,7 +37,7 @@
 
 		<div id="load">
 			<div id="loadInner">
-				<p id="loadText"> LOADING </p>
+				<p id="loadText"> ⑀⦶⫔ </p>
 			</div>
 		</div>
 
@@ -49,86 +49,126 @@
 
 				// GLOBAL VARIABLES SOUND
 
-				// 	Create an AudioListener and add it to the camera
-				var listenerOne = new THREE.AudioListener();
-				var listenerTwo = new THREE.AudioListener();
-				var listenerThree = new THREE.AudioListener();
-				var listenerFour = new THREE.AudioListener();
-				var listenerFive = new THREE.AudioListener();
+				// //Create an AudioListener and add it to the camera
+					var listenerOne = new THREE.AudioListener();
+					var listenerTwo = new THREE.AudioListener();
+					var listenerThree = new THREE.AudioListener();
+					var listenerFour = new THREE.AudioListener();
+					var listenerFive = new THREE.AudioListener();
+					var listenerSix = new THREE.AudioListener();
+					var listenerSeven = new THREE.AudioListener();
+					var listenerEight = new THREE.AudioListener();
 
-				// 	camera.add( listener )
-				// 	create a global audio source
-				var soundOne = new THREE.Audio( listenerOne );
-				var soundTwo = new THREE.Audio( listenerTwo );
-				var soundThree = new THREE.Audio( listenerThree );
-				var soundFour = new THREE.Audio( listenerThree );
-				var soundFive = new THREE.Audio( listenerThree );
+					// // create a global audio source
+					var soundOne = new THREE.Audio( listenerOne );
+					var soundTwo = new THREE.Audio( listenerTwo );
+					var soundThree = new THREE.Audio( listenerThree );
+					var soundFour = new THREE.Audio( listenerFour );
+					var soundFive = new THREE.Audio( listenerFive );
+					var soundSix = new THREE.Audio( listenerSix );
+					var soundSeven = new THREE.Audio( listenerSeven );
+					var soundEight = new THREE.Audio( listenerEight );
 
-				var audioLoaderOne = new THREE.AudioLoader( manager );
-				var audioLoaderTwo = new THREE.AudioLoader( manager );
-				var audioLoaderThree = new THREE.AudioLoader( manager );
-				var audioLoaderFour = new THREE.AudioLoader( manager );
-				var audioLoaderFive = new THREE.AudioLoader( manager );
+					//Loaders
+					var audioLoaderOne = new THREE.AudioLoader(manager);
+					var audioLoaderTwo = new THREE.AudioLoader(manager);
+					var audioLoaderThree = new THREE.AudioLoader(manager);
+					var audioLoaderFour = new THREE.AudioLoader(manager);
+					var audioLoaderFive = new THREE.AudioLoader(manager);
+					var audioLoaderSix = new THREE.AudioLoader(manager);
+					var audioLoaderSeven = new THREE.AudioLoader(manager);
+					var audioLoaderEight = new THREE.AudioLoader(manager);
 
-				//	Load a sound and set it as the Audio object's buffer
-				audioLoaderOne.load( 'sounds/Left.ogg', function( Abuffer ) {
+					// //Load a sound and set it as the Audio object's buffer
+					audioLoaderOne.load( 'sounds/LeftFade.ogg', function( Abuffer ) {
+						
+						soundOne.setBuffer( Abuffer );							
+						soundOne.setLoop(true);							
+						soundOne.setVolume(2);							
+						soundOne.play();
 					
-					soundOne.setBuffer( Abuffer );						
-					soundOne.setLoop(true);						
-					soundOne.setVolume(1.2);						
-					soundOne.play();
-				
-				});	
+					});	
+						
+
+					audioLoaderTwo.load( 'sounds/RightFade.ogg', function( Bbuffer ) {
 					
+						soundTwo.setBuffer( Bbuffer );						
+						soundTwo.setLoop(true);						
+						soundTwo.setVolume(2);						
+						soundTwo.play();
+					
+					});
 
-				audioLoaderTwo.load( 'sounds/Right.ogg', function( Bbuffer ) {
-				
-					soundTwo.setBuffer( Bbuffer );					
-					soundTwo.setLoop(true);					
-					soundTwo.setVolume(1.2);				
-					soundTwo.play();
-				
-				});
+					
+					audioLoaderThree.load( 'sounds/Fairchild_101.ogg', function( Cbuffer ) {
+					
+						soundThree.setBuffer( Cbuffer );						 
+						soundThree.setLoop(true);						
+						soundThree.setVolume(0.1); 					
+						soundThree.setPlaybackRate(1); // can play here 4 is also nice
+						soundThree.play();					
+					
+					});
 
-				
-				audioLoaderThree.load( 'sounds/Tounge_Amb.ogg', function( Cbuffer ) {
-				
-					soundThree.setBuffer( Cbuffer );					 
-					soundThree.setLoop(true);					
-					soundThree.setVolume(0.5); 				
-					soundThree.setPlaybackRate(1); // can play here 4 is also nice
-					soundThree.play();					
-				
-				});
-
-				
-				audioLoaderFour.load( 'sounds/noiseBursts.ogg', function( Dbuffer ) {
-				
-					soundFour.setBuffer( Dbuffer );						 
-					soundFour.setLoop(true);					
-					soundFour.setVolume(0.2); 					
-					soundFour.setPlaybackRate(1); 
-					soundFour.play();
-				
-				});
+					
+					audioLoaderFour.load( 'sounds/pandomFades2.ogg', function( Dbuffer ) {
+					
+						soundFour.setBuffer( Dbuffer );						 
+						soundFour.setLoop(true);						
+						soundFour.setVolume(0.05);  						
+						soundFour.setPlaybackRate(1); 
+						soundFour.play();
+					
+					});
 
 
-			    audioLoaderFive.load( 'sounds/pandon.ogg', function( Ebuffer ) {
-				
-					soundFive.setBuffer( Ebuffer );					 
-					soundFive.setLoop(true);					
-					soundFive.setVolume(0.01); 					
-					soundFive.setPlaybackRate(1); 
-					soundFive.play();
-				
-				});
+				    audioLoaderFive.load( 'sounds/Noise_1.ogg', function( Ebuffer ) {
+					
+						soundFive.setBuffer( Ebuffer );						 
+						soundFive.setLoop(false);						
+						soundFive.setVolume(0.5); 						
+						soundFive.setPlaybackRate(1); 
+
+					});
+
+					
+					audioLoaderSix.load( 'sounds/Noise_2.ogg', function( Fbuffer ) {
+					
+						soundSix.setBuffer( Fbuffer );						 
+						soundSix.setLoop(false);						
+						soundSix.setVolume(2); 						
+						soundSix.setPlaybackRate(0.8); 
+
+					});
+
+					
+					audioLoaderSeven.load( 'sounds/Noise_3.ogg', function( Gbuffer ) {
+					
+						soundSeven.setBuffer( Gbuffer );						 
+						soundSeven.setLoop(false);						
+						soundSeven.setVolume(0.8); 
+						soundSeven.setPlaybackRate(1); 
+
+					});
+
+
+					audioLoaderEight.load( 'sounds/Noise_4.ogg', function( Hbuffer ) {
+					
+						soundEight.setBuffer( Hbuffer );						 
+						soundEight.setLoop(false);						
+						soundEight.setVolume(0.8); 						
+						soundEight.setPlaybackRate(1); 
+
+					});
+
+					///////////////////
 
 				// GLOBAL VARIABLES TEXT
 
 				var currentIndex;
 				var newIndex;
 
-				var str1 = "I enter the small room of the Panamerican Kitchen . It is already quite late , the kitchen is about to close . A cloud of metallic fat is hanging in the air ; fat they only use for Panamerican food when the vegan delivery had a shortage .     You immediately caught my attention . You are sitting at a small plastic table , a glass of cheap scotch and a plate with left-over heads of sucked king prawns in front of you . You are slightly bending over the table . In a permanent back and forth you are fighting with wisps of your long blond hair that permanently keep falling into your face . Push back . Fall . Push back . Fall .     I like the graceful rhythmic movements of your fingers fondling the glass panel of your phone . You seem to be far away . I make a step towards you .     Nice pic .   Intriguing romantic eyes .. sweet clever deep ... submissive but independent. A kinky mind behind those eyes. I tried to describe part of your erotic shade you have in that picture .          You giggle. Your teeth are straight . Something unusual in this city . Your hair caresses your cleavage . I think I love you .     xyz smile , hair and height . You look warm and positive How are you today ?     Toilet flushing . Light flashing .     You don’t look up . Instead your hair continues seesawing back and forth . The movement of your fingers changed . Now your thumb rhythmically wipes the screen from right to left , right to left , right to left . Then left to right . You are incredibly fast .     I observe you for a while . The room is empty . Besides both of us all the other guests have left already . The waiter polishes wine glasses with a holey kitchen towel .      I position myself closer to you . This will crop away my unattractive parts from your field of vision . My way too skinny legs . My bad taste . I twist my head a bit to create the right incidental angle for the light in this room to sculpt my face . I come intensely close .     Hey , thought I’d try a question to break the ice . If you could travel to any country in the world , where would you go and why ?     You don’t look up . No response . No reaction on my inept advance . I start to panic . I like animals , but unfortunately animals are not allowed in the Panamerican Kitchen . You could otherwise see kittens balancing on my head , dogs licking my face , or me cuddling an ostrich . I know that everyone else is doing that . It’s cute . You might have liked it .     I open my business case . I am a journalist . You can see me on Aljazeera . I have a degree from Cambridge . Here , I am also on youtube . I will send you the links later . I want to meet you .     I close it again . You seem to be absorbed in finger movement .      laters , James Michael (American) xoxoxo Jason     I leave the Panamerican Kitchen .";
+				var str1 = "I enter the small room of the Panamerican Kitchen . It is already quite late , the kitchen is about to close . A cloud of metallic fat is hanging in the air ; fat they only use for Panamerican food when the vegan delivery had a shortage .     You immediately caught my attention . You are sitting at a small plastic table , a glass of cheap scotch and a plate with left-over heads of sucked king prawns in front of you . You are slightly bending over the table . In a permanent back and forth you are fighting with wisps of your long blond hair that permanently keep falling into your face . Push back . Fall . Push back . Fall .     I like the graceful rhythmic movements of your fingers fondling the glass panel of your phone . You seem to be far away . I make a step towards you .     Nice pic .   Intriguing romantic eyes .. sweet clever deep ... submissive but independent. A kinky mind behind those eyes. I tried to describe part of your erotic shade you have in that picture .          You giggle. Your teeth are straight . Something unusual in this city . Your hair caresses your cleavage . I think I love you .     Nice smile , hair and height . You look warm and positive How are you today ?     Toilet flushing . Light flashing .     You don’t look up . Instead your hair continues seesawing back and forth . The movement of your fingers changed . Now your thumb rhythmically wipes the screen from right to left , right to left , right to left . Then left to right . You are incredibly fast .     I observe you for a while . The room is empty . Besides both of us all the other guests have left already . The waiter polishes wine glasses with a holey kitchen towel .      I position myself closer to you . This will crop away my unattractive parts from your field of vision . My way too skinny legs . My bad taste . I twist my head a bit to create the right incidental angle for the light in this room to sculpt my face . I come intensely close .     Hey , thought I’d try a question to break the ice . If you could travel to any country in the world , where would you go and why ?     You don’t look up . No response . No reaction on my inept advance . I start to panic . I like animals , but unfortunately animals are not allowed in the Panamerican Kitchen . You could otherwise see kittens balancing on my head , dogs licking my face , or me cuddling an ostrich . I know that everyone else is doing that . It’s cute . You might have liked it .     I open my business case . I am a journalist . You can see me on Aljazeera . I have a degree from Cambridge . Here , I am also on youtube . I will send you the links later . I want to meet you .     I close it again . You seem to be absorbed in finger movement .      laters , James Michael (American) xoxoxo Jason     I leave the Panamerican Kitchen .";
 				var words1 = str1.split(" "); 
 				var amountWords = words1.length;
 				var text = "";
@@ -472,6 +512,12 @@
 
 				}
 
+				function getRandomInt(min, max) {
+    				
+    				return Math.floor(Math.random() * (max - min + 1)) + min;
+					
+					}
+
 				// mouse over tongue mesh
 
 				function onDocumentMouseDown( event ) {
@@ -483,8 +529,12 @@
 
 					var intersects = raycaster.intersectObjects( objects );
 
-					if ( intersects.length > 0 ) { // 0. STelle im Array und mit der id "5" hab ich vergeben
+					var snd = [soundFive,soundSix,soundSeven,soundEight]; // array of soundfiles defined starting on line 160
 
+					if ( intersects.length > 0 ) { 
+
+						x = getRandomInt(0,4);
+						snd[x].play();
 
 					}
 
@@ -657,11 +707,7 @@
 				};
 
 				manager.onProgress = function ( item, loaded, total ) {      
-
-				    console.log(item, loaded, total);
-
-
-				   
+				    console.log(item, loaded, total);			   
 
 				};
 
